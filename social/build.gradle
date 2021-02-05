@@ -43,7 +43,7 @@ publish{
     //项目描述 
     desc='umeng-social-shar'
     //项目网址    
-    website='https://github.com/LeLe673893702/expand_recycleview'
+    website='https://github.com/LeLe673893702/umeng-social-share'
 }
 
 dependencies {
