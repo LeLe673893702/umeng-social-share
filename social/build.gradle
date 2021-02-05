@@ -1,0 +1,56 @@
+plugins {
+    id 'com.android.library'
+    id 'com.novoda.bintray-release'
+}
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+publish{
+    //bintray.com的用户名    
+    userOrg='newler'
+    //一般写包名   
+    groupId='com.newler'
+    //指定仓库名称
+//  repo="maven"
+    //项目名称   
+    artifactId='umeng-social-share'
+    //版本号    
+    publishVersion='1.0.0'
+    //项目描述 
+    desc='umeng-social-shar'
+    //项目网址    
+    website='https://github.com/LeLe673893702/expand_recycleview'
+}
+
+dependencies {
+    implementation 'com.umeng.umsdk:common:9.1.0'
+    api files('libs/umeng-sharetool-7.0.0.jar')
+    api files('libs/umeng-share-wechat-simplify-7.0.0.jar')
+    api files('libs/umeng-share-sina-simplify-7.0.0.jar')
+    api files('libs/umeng-share-QQ-simplify-7.0.0.jar')
+    api files('libs/umeng-share-core-7.0.0.jar')
+}
