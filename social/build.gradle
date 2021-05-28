@@ -56,5 +56,6 @@ dependencies {
     api  'com.umeng.umsdk:share-wx:7.1.4'
     api  'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.6.5'//微信官方SDK依赖库
     api  'com.umeng.umsdk:share-sina:7.1.4'
+    implementation files('libs\\umeng-share-sina-full-7.1.4.jar')
 //    api  'com.sina.weibo.sdk:core:10.10.0:openDefaultRelease@aar'//新浪微博官方SDK依赖库，
 }
