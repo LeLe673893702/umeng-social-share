@@ -48,7 +48,7 @@ publish{
 //gradlew clean build bintrayUpload -PbintrayUser=newler -PbintrayKey=732239b5215135660686d4337285929be2bc85f2 -PdryRun=false
 dependencies {
     implementation 'com.umeng.umsdk:common:9.1.0'
-    implementation(name:'openDefault-10.10.0', ext:'aar')
+    implementation files('libs/openDefault-10.10.0.aar')
     api files('libs/umeng-sharetool-7.1.4.jar')
     api files('libs/umeng-share-core-7.1.4.jar')
     api  'com.umeng.umsdk:share-qq:7.1.4'
